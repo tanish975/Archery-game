@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Archery Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🏹 Archery Game</h1>
+
+  <svg id="game" width="1000" height="500">
+    <circle id="target" cx="800" cy="250" r="22" fill="red" />
+    <circle id="powerUp" cx="-50" cy="-50" r="12" fill="gold" stroke="orange" stroke-width="2" />
+    <g id="arrowGroup">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="black" stroke-width="4" />
+      <polygon points="40,-5 50,0 40,5" fill="black" />
+    </g>
+    <circle id="trail" cx="100" cy="250" r="3" fill="yellow" opacity="0.6" />
+  </svg>
+
+  <div id="ui">
+    ❤️ Lives: <span id="lives">3</span> |
+    🏆 Score: <span id="score">0</span> |
+    🔥 Combo: <span id="combo">0</span> |
+    ⏱️ Time: <span id="timer">60</span>s
+    <br />
+    <button id="restartBtn">Restart</button>
+    <button id="themeBtn">Toggle Theme</button>
+    <div id="message"></div>
+    <div id="leaderboard"></div>
+  </div>
+
+  <audio id="shootSound" src="shoot.mp3" preload="auto"></audio>
+  <audio id="hitSound" src="hit-sound.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
